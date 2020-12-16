@@ -1,6 +1,4 @@
 <h1>Application Info</h1>
-
-<section>
   <p><b>Name: </b><%= @app.name %></p>
   <p><b>Street Address: </b><%= @app.address %></p>
   <p><b>State: </b><%= @app.state %></p>
@@ -9,7 +7,7 @@
   <p><b>Description: </b><%= @app.description %></p>
   <p><b>Application Status: </b><%= @app.status %></p>
   <p><b>Pets Applied For: </b><%= link_to "#{@app.pet_name}", "/user_applications/#{@app.id}/pets"%></p>
-</section>
+
 
 <% if @app.pets.count == 0 %>
   <h2>Select pets</h2>
