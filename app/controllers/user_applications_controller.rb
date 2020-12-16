@@ -7,7 +7,7 @@ class UserApplicationsController < ApplicationController
   end
 
   def new
-    
+    @user_application = UserApplication.new
   end
 
   def create
@@ -28,6 +28,6 @@ class UserApplicationsController < ApplicationController
 
   private
   def app_params
-    params.permit(:name, :address, :city, :state, :zip, :description, :status)
+    params.require(:user_application).permit(:name, :address, :city, :state, :zip, :description, :status)
   end
 end
