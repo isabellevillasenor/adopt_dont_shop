@@ -15,12 +15,12 @@ class PetsController < ApplicationController
   def update
     pet = Pet.find(params[:id])
     pet.update(pets_params)
-    redirect_to "/pets/#{pet.id}"
+    redirect_to "/pets/#{pet.id}"#change path
   end
 
   def destroy
     Pet.destroy(params[:id])
-    redirect_to '/pets'
+    redirect_to '/pets'#change path
   end
 
   private
