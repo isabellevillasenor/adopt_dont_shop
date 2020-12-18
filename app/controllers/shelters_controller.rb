@@ -13,7 +13,7 @@ class SheltersController < ApplicationController
 
   def create
     Shelter.create(shelter_params)
-    redirect_to '/shelters'
+    redirect_to shelters_path #change path
   end
 
   def edit
@@ -23,12 +23,12 @@ class SheltersController < ApplicationController
   def update
     shelter = Shelter.find(params[:id])
     shelter.update(shelter_params)
-    redirect_to "/shelters/#{shelter.id}"
+    redirect_to "/shelters/#{shelter.id}" # change path
   end
 
   def destroy
     Shelter.destroy(params[:id])
-    redirect_to '/shelters'
+    redirect_to '/shelters' #change path
   end
 
   private
